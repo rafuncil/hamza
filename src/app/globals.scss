@@ -1,0 +1,236 @@
+@import "./normalize.scss";
+
+// responsive
+$max-width: 1440px;
+$desktop: 1280px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 480px;
+$min-width: 360px;
+
+// colors
+$black: #181818;
+$white: #F3F3F3;
+
+$text-color: white;
+$bg-color: black;
+$decor-color: #222;
+
+body {
+	background: linear-gradient(90deg, #000000, #737373);
+	color: $text-color;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+}
+
+h1{
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.form-block {
+	width: 100vw;
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+		[alt = logo]{
+		position: absolute;
+		left: 50%;
+		top: 0;
+		translate: -50% -30px;
+		width: 240px;
+		
+	}
+
+}
+
+.form {
+	width: clamp(300px, 100%, 600px);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: 100%;
+	z-index: 1;
+	position: relative;
+	
+}
+
+.btn {
+	padding: 0.6em;
+	// text-transform: uppercase;
+	color: $text-color;
+	background-color: #25D366;
+	border: 1px solid currentColor;
+	margin-top: 15px;
+	font-size: 16px;
+	border-radius: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	align-self: center;
+	width: min(250px, 100%);
+}
+
+.btn img {
+
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.final-info {
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	font-size: 14px;
+	gap: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 20px;
+	opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    max-height: 500px; 
+    transform: translateY(0);
+  }
+	 
+	p {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	span {
+		font-size: 1.2em;
+	}
+}
+
+input[type=range]{
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	height: 20px;
+	&::-webkit-slider-thumb{
+		-webkit-appearance: none;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		cursor: pointer;	
+		background-color: $text-color;
+		translate: 0 -43%;
+		transition: background 450ms ease-in;
+		
+	}
+
+
+	&::-webkit-slider-runnable-track{
+		background-color: rgba($color: white	, $alpha: 0.5);
+		height: 5px;
+	}
+		
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: 16px;
+}
+
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-label {
+  margin-bottom: -6px;
+}
+
+.paymentType {
+  position: relative;
+  display: inline-flex;
+  background: #222222;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+  font-size: 15px;
+  gap: 0;
+  overflow: hidden;
+  user-select: none;
+	height: 38.78px;
+}
+
+.paymentType label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 600;
+  color: #888888;
+  transition: color 0.3s ease;
+  min-width: 120px;
+  flex: 1;
+}
+
+.paymentType input[type="radio"] {
+  display: none;
+}
+
+/* Подвижный ползунок */
+.slider-track {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: linear-gradient(45deg, #555555, #444444);
+  border-radius: 25px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.26, 0.64, 1);
+	// transition: transform 0.18s cubic-bezier(0, 0, 1, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Правильные селекторы для сдвига слайдера */
+#nal:checked ~ .slider-track {
+  transform: translateX(0%);
+}
+
+#beznal:checked ~ .slider-track {
+  transform: translateX(100%);
+}
+
+/* Цвет текста для выбранного варианта */
+#nal:checked ~ label[for="nal"] span,
+#beznal:checked ~ label[for="beznal"] span {
+  color: white;
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Полупрозрачный текст для невыбранных */
+.paymentType label span {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Ховер эффекты */
+.paymentType label:hover span {
+  opacity: 0.9;
+}

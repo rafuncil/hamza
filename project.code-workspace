@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "files.exclude": {
+      "mongo-init.js": true,
+      "data": true,
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true,
+      "**/*-lock.json": true,
+      "**/.next": true
+    },
+  }
+}

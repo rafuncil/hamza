@@ -1,0 +1,33 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  input {
+    font-size: 16px;
+    background-color: #222;
+    color: white;
+    border: 1px solid ;
+    padding: 0.4em 0.8em;
+    border-radius: 30px;
+	  appearance: none;
+    
+  }
+}
+
+.title {
+  font-size: 16px;
+}
+
+.valid {
+  opacity: 0;
+  transition: 0.5s;
+  overflow: hidden;
+  height: 0em;
+  color: #dd5856;
+  font-size: 12px;
+  &[data-visible = true]{
+    padding-top: 0.2em;
+    opacity: 1;
+    height: 1.5em;
+  }
+}
