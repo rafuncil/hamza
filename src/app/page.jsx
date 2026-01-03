@@ -35,7 +35,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/rafuncil/cubecalc/main/public/data/products_full.json')
+    fetch('https://github.com/rafuncil/hamza/blob/main/public/products_full.json')
     .then(response => response.json())
     .then(data => setOptions(data))
     .catch(error => console.error('Error:', error));
