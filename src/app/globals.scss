@@ -208,17 +208,17 @@ button {
 }
 
 /* Правильные селекторы для сдвига слайдера */
-#nal:checked ~ .slider-track {
+#week:checked ~ .slider-track {
   transform: translateX(0%);
 }
 
-#beznal:checked ~ .slider-track {
+#month:checked ~ .slider-track {
   transform: translateX(100%);
 }
 
 /* Цвет текста для выбранного варианта */
-#nal:checked ~ label[for="nal"] span,
-#beznal:checked ~ label[for="beznal"] span {
+#week:checked ~ label[for="week"] span,
+#month:checked ~ label[for="month"] span {
   color: white;
   opacity: 1;
   font-weight: 500;

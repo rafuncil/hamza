@@ -12,8 +12,8 @@ export const customSeletcStyles = {
   }),
   input: (provided) => ({
     ...provided,
-    color: 'white', // ⬅️ вот тут меняешь цвет текста ввода
-    fontSize: '16px', // можно и размер сразу
+    color: 'white', 
+    fontSize: '16px', 
   }),
   option: (provided, state) => ({
     ...provided,
@@ -41,8 +41,8 @@ export const customSeletcStyles = {
     ...provided,
     padding: '8px 16px',
     fontSize: '12px',
-    color: '#cbd5e0', // светло-серый текст
-    backgroundColor: '#1a1a1a', // чуть темнее фон, чем у option
+    color: '#cbd5e0', 
+    backgroundColor: '#1a1a1a',
     fontWeight: 'bold',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
