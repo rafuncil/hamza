@@ -54,7 +54,7 @@ export default function Home() {
       • Первый взнос: ${Number(payment).toLocaleString('ru-RU') + ' ₽'} 
       • Срок: ${time} мес.
       • Способ оплаты: ${paymentType == 'week' ? "Еженедельно" : "Ежемесячно" }
-      • Платёж в месяц: ${monthlyPrice} 
+      • Платёж в ${paymentType == 'week' ? "неделю" : "месяц"}: ${monthlyPrice} 
       • Общая стоимость: ${totalPrice}`;
 
     
@@ -231,7 +231,7 @@ export default function Home() {
           
 
         <div className={`final-info ${showInfo ? 'visible' : 'hidden'}`}> 
-          <p>Ежемесячный платеж: <span>{monthlyPrice}</span></p>
+          <p>{paymentType == 'week' ? "Еженедельный" : "Ежемесячный"} платеж: <span>{monthlyPrice}</span></p>
           <p>Общая стоимость: <span>{totalPrice}</span></p>
           <p>Торговая наценка: <span>{overPrice}</span></p>
         </div>
