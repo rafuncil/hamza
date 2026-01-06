@@ -185,7 +185,7 @@ export default function Home() {
           isOptionSelected={isOptionSelected}
           placeholder="— Выберите —"
         />
-        <Input name='price' onValid={setValid} title="Стоимость товара (₽)" value={typeof price === 'number' ? price : ''} type='number'  setter={setPrice}/>
+        {/* <Input name='price' onValid={setValid} title="Стоимость товара (₽)" value={typeof price === 'number' ? price : ''} type='number'  setter={setPrice}/> */}
 
         <Input name='months' onValid={setValid} title="Срок рассрочки (мес.)" min={2} max={6}  placeholder= '' type='number' value={time} setter={setTime} />
         <input type="range"  {...rangeMonthOps} />

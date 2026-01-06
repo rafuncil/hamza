@@ -27,7 +27,8 @@ export const customSeletcStyles = {
     '&:active': {
       backgroundColor: '#777',
     },
-    fontSize: '14px'
+    fontSize: '14px',
+    Index: '3'
   }),
   menu: (provided) => ({
     ...provided,
@@ -35,7 +36,8 @@ export const customSeletcStyles = {
     border: '1px solid #e2e8f0',
     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
     fontSize: '16px',
-    backgroundColor: '#222'
+    backgroundColor: '#222',
+    zIndex: 3
   }),
   groupHeading: (provided) => ({
     ...provided,
