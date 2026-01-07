@@ -3,16 +3,8 @@
     "label": "iPhone 17 Pro Max Версии sim ",
     "options": [
       {
-        "label": "iPhone 17 Pro Max 1TB sim Silver",
-        "value": 163000
-      },
-      {
-        "label": "iPhone 17 Pro Max 1TB sim Blue",
-        "value": 163000
-      },
-      {
-        "label": "iPhone 17 Pro Max 512gb sim",
-        "value": 140000
+        "label": "iPhone 17 Pro Max 256gb sim Blue",
+        "value": 115500
       },
       {
         "label": "iPhone 17 Pro Max 256gb sim Orange",
@@ -23,8 +15,20 @@
         "value": 118500
       },
       {
-        "label": "iPhone 17 Pro Max 256gb sim Blue",
-        "value": 115500
+        "label": "iPhone 17 Pro 512gb sim Orange",
+        "value": 127500
+      },
+      {
+        "label": "iPhone 17 Pro Max 512gb sim",
+        "value": 140000
+      },
+      {
+        "label": "iPhone 17 Pro Max 1TB sim Silver",
+        "value": 163000
+      },
+      {
+        "label": "iPhone 17 Pro Max 1TB sim Blue",
+        "value": 163000
       }
     ]
   },
@@ -38,10 +42,6 @@
       {
         "label": "iPhone 17 Pro 512gb sim Silver",
         "value": 126500
-      },
-      {
-        "label": "iPhone 17 Pro 512gb sim Orange",
-        "value": 127500
       }
     ]
   },
@@ -49,16 +49,16 @@
     "label": "iPhone 17 Pro Max Версии E-sim",
     "options": [
       {
-        "label": "iPhone 17 Pro Max 2TB E-sim",
-        "value": 167500
+        "label": "iPhone 17 Pro Max 256gb E-sim Orange",
+        "value": 107000
       },
       {
         "label": "iPhone 17 Pro Max 512gb E-sim",
         "value": 125000
       },
       {
-        "label": "iPhone 17 Pro Max 256gb E-sim Orange",
-        "value": 107000
+        "label": "iPhone 17 Pro Max 2TB E-sim",
+        "value": 167500
       }
     ]
   },

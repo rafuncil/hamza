@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   const fullOptions = [...options, manualOptionGroup];
-  const firstPaymentRate = 0.30; // процент первоначального взноса
+  const firstPaymentRate = 0.20; // процент первоначального взноса
   const rate = 0.10;
 
 
