@@ -233,7 +233,7 @@ export default function Home() {
         <div className={`final-info ${showInfo ? 'visible' : 'hidden'}`}> 
           <p>{paymentType == 'week' ? "Еженедельный" : "Ежемесячный"} платеж: <span>{monthlyPrice}</span></p>
           <p>Общая стоимость: <span>{totalPrice}</span></p>
-          <p>Торговая наценка: <span>{overPrice}</span></p>
+          {/* <p>Торговая наценка: <span>{overPrice}</span></p> */}
         </div>
       
         <button type='submit' className='btn'>Оставить заявку
